@@ -1,0 +1,24 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class WordSearchMain {
+	public static void main(String[] args) throws IOException {
+		ArrayList<E> rows=new ArrayList<E>();
+		String line="";
+		try {
+			BufferedReader br=new BufferedReader(new FileReader("wordSearch.csv"));
+			while (line=br.readLine() != null) {
+				char[] row= 
+				
+				
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

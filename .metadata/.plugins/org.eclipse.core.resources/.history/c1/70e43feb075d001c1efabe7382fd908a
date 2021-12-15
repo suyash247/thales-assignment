@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class WordSearchMain {
+	int count=0;
+	int result;
+	public static void main(String[] args){
+		WordSearchMain WSM=new WordSearchMain();
+		char[][] wordGrid = WSM.createWordGrid("wordSearch.csv");
+		for (int i = 0; i < wordGrid.length; i++) {
+			for (int j = 0; j < wordGrid[i].length; j++) {
+				searchRight(wordGrid[i][j],char toSearch[]);
+				searchLeft(wordGrid[i][j]);
+				searchTop(wordGrid[i][j]);
+				searchBottom(wordGrid[i][j]);
+				searchTopRight(wordGrid[i][j]);
+				searchTopLeft(wordGrid[i][j]);
+				searchBottomRight(wordGrid[i][j]);
+				result=searchBottomLeft(wordGrid[i][j]);
+			}
+			
+		}
+	}
+	
+	private static void searchRight(char c) {
+		
+		
+	}
+
+	private char[][] createWordGrid(String input){
+		ArrayList<char[]> rows=new ArrayList<char[]>();
+		String line="";
+		try {
+			BufferedReader br=new BufferedReader(new FileReader(input));
+			try {
+				while ((line=br.readLine()) != null) {
+					char[] row= line.toCharArray();
+					rows.add(row);
+					
+					
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		char[][] wordGrid=new char[rows.size()][];
+		for (int i=0;i<rows.size();i++) {
+			wordGrid[i]=rows.get(i);
+		}
+		return wordGrid;
+	}
+
+}
