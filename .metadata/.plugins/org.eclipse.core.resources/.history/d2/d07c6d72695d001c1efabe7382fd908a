@@ -101,7 +101,7 @@ public class WordSearchMain {
 				}
 				i=i-1;
 				j=j-1;
-				if(!(i>=0 && j>=0 && j<=(wordGrid[i].length-1)) && k!=(charArray.length-1)) {
+				if(!(i>=0 && j>=0 && j<=(wordGrid[i].length-1)) & k!=(charArray.length-1)) {
 					flag=false;
 					break;
 				}
